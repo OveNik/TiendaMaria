@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Maria</title>
+  <style>
+
+    #principal {
+      width: 1300px; /* Ancho del div */
+      height: 3000px; /* Altura del div */
+      background-color: #d6d6d6; /* Color de fondo */
+      margin-top: 20px;
+      margin-left: 20px;
+      font-family: Arial, sans-serif; /* Fuente */
+      color: #333; /* Color de texto */
+      text-align: center; /* Alineación de texto */
+      position: absolute;
+    }
+    #logo {
+      width: 100px; 
+      height: 100px; 
+      margin-top: -10px;
+      margin-left: 630px;
+      background-color: #ffffff; 
+      text-align: center; 
+      position: absolute;
+      background-image: url('LOLA.png'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #menu {
+      width: 1250px; /* Ancho del div */
+      height: 50px; 
+      margin-top: 100px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      position: absolute;
+    }
+    #casita{
+      width: 30px; /* Ancho del div */
+      height: 30px; 
+      margin-top: 10px;
+      margin-left: 0px;
+      position: absolute;
+      background-image: url('casita.png'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+
+    
+    #camperas,#camisetas,#remeras,#sueter {
+      width: 100px; /* Ancho del div */
+      height: 40px; 
+      color:#181818;
+      font-size: 30px;
+      text-align: center;
+      position: absolute;
+      margin-top: 10px;
+      transition: transform 0.3s ease; /* Transición suave */
+    }
+    #camperas:hover,
+    #camisetas:hover,
+    #remeras:hover,
+    #sueter:hover{
+      transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    }
+    #camperas { margin-left: 50px;}
+    #camisetas { margin-left: 250px;}
+    #remeras { margin-left: 450px;}
+    #sueter {margin-left: 750px;}
+
+    #fotosportada {
+      width: 1250px; /* Ancho del div */
+      height: 330px; 
+      margin-top: 160px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      background-color: #181818; 
+      text-align: center;
+      position: absolute;
+      background-image: url('banner.jpg'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #subfoto1 {
+      width: 620px; /* Ancho del div */
+      height: 100px; 
+      margin-top: 500px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+      background-color: #181818; 
+      text-align: center;
+      position: absolute;
+      border-radius: 10px; /* Redondear los bordes */
+    }
+    #subfoto2 {
+      width: 620px; /* Ancho del div */
+      height: 100px; 
+      margin-top: 500px;
+      margin-left: 650px;
+      border: 1px solid #ccc;
+      background-color: #181818; 
+      text-align: center;
+      position: absolute;
+      border-radius: 10px; /* Redondear los bordes */
+    }
+    #subtexto {
+      width: 1250px; /* Ancho del div */
+      height: 50px; 
+      margin-top: 610px;
+      margin-left: 20px;
+      text-align: center;
+      position: absolute;
+    }
+    #textoDestacados {
+      width: 1250px; /* Ancho del div */
+      height: 30px; 
+      color:#181818;
+      font-size: 20px;
+      text-align: center;
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 0px;  
+    }
+    #destacados {
+      width: 1250px; /* Ancho del div */
+      height: 350px; 
+      margin-top: 650px;
+      margin-left: 20px;
+      text-align: center;
+      position: absolute;
+    }
+    #img1Destacados,#img2Destacados,#img3Destacados,#img4Destacados {
+      width: 300px; /* Ancho del div */
+      height: 340px; 
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      background-color: #181818; 
+      text-align: center;
+      position: absolute;
+      border-radius: 10px; /* Redondear los bordes */
+      border-color: #181818;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Agregar sombra */
+      transition: transform 0.3s ease; /* Transición suave */
+    }
+    #img1Destacados:hover,
+    #img2Destacados:hover,
+    #img3Destacados:hover,
+    #img4Destacados:hover {
+      transform: scale(1.03); /* Aumenta el tamaño de la imagen al pasar el mouse */
+    }
+    #img1Destacados{
+      margin-left: 10px;
+      background-image: url('dest1.jpg'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #img2Destacados{
+      margin-left: 320px;
+      background-image: url('dest2.jpg'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #img3Destacados{
+      margin-left: 630px;
+      background-image: url('dest3.jpg'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #img4Destacados{
+      margin-left: 940px;
+      background-image: url('dest4.jpg'); /* Ruta de la imagen */
+      background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
+      background-position: center; /* Centra la imagen */
+    }
+    #verMas {
+      width: 200px; /* Ancho del div */
+      height: 50px; 
+      margin-top: 1020px;
+      margin-left: 550px;
+      border: 1px solid #ccc;
+      background-color: #181818; 
+      text-align: center;
+      position: absolute;
+      border-radius: 10px; /* Redondear los bordes */
+      border-color: #181818;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Agregar sombra */
+      transition: transform 0.3s ease; /* Transición suave */
+    }
+  </style>
+</head>
+<body>
+  <div id="principal">
+    <div id="logo"></div>
+    <div id="menu">
+      <div id="casita"></div>
+      <div id="camperas">CAMPERAS</div>
+      <div id="camisetas">CAMISETAS</div>
+      <div id="remeras">REMERAS</div>
+      <div id="sueter">SWETER</div>
+  </div>
+    <div id="fotosportada"></div>
+    <div id="subfoto1">
+      aqui adentro abra ssubfoto 1 y 2
+    </div>
+    <div id="subfoto2">
+      aqui adentro abra ssubfoto 1 y 2
+    </div>
+    <div id="subtexto"> <div id="textoDestacados">
+      __________________ MAS VENDIDOS ----------------------</div></div>
+    <div id="destacados">
+      <div id="img1Destacados"></div>
+      <div id="img2Destacados"></div>
+      <div id="img3Destacados"></div>
+      <div id="img4Destacados"></div>
+    </div>
+    <div id="verMas">VER MAS</div>
+
+  </div>
+  <button onclick="enviarMensajeWhatsApp()">Enviar WhatsApp</button>
+
+  <script>
+    function enviarMensajeWhatsApp() {
+      // Reemplaza '123456789' con el número de teléfono al que deseas enviar el mensaje
+      var numero = '+541173606424';
+      var imagenURL = 'https://ethic.es/2023/03/el-enigma-de-la-imagen/';
+      // Reemplaza 'Hola, me interesa este producto.' con el texto que deseas enviar
+      var mensaje = "Hola, me interesa info de este producto";
+      // Genera el enlace para enviar el mensaje a través de WhatsApp
+      var url = 'https://api.whatsapp.com/send?phone=' + numero + '&text=' + encodeURIComponent(mensaje);
+      // Abre el enlace en una nueva pestaña
+      window.open(url);
+    }
+
+
+  </script>
+</body>
+</html>
